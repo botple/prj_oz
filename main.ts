@@ -1,5 +1,9 @@
 DFRobotMaqueenPlus.I2CInit()
 
 basic.forever(function () {
-    DFRobotMaqueenPlus.mototRun(Motors.ALL, Dir.CW, 100)
+    let distance = DFRobotMaqueenPlus.ultraSonic(PIN.P0, PIN.P0)
+
+    basic.showNumber(distance)
+
+    basic.pause(500)
 })
